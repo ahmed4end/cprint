@@ -1,4 +1,6 @@
 import random, sys, time, os
+
+#text example (must be under 75 letters!)
 text = "Hello, Human!, this message should be printed in a cool way xD: "
 
 class cprint():
@@ -28,7 +30,7 @@ class cprint():
 			"rs": "self.rsprint(text, speed)",	 #Reverse #Slow printing
 			"m": "self.mprint(text, speed)",     #Middle printing
 			"rm": "self.rmprint(text, speed)",	 #reverse #Middle printing
-
+			"r": 'eval(categories[random.choice(["d", "fo", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"])])'
 		}
 		try:
 			eval(categories[style])
@@ -125,14 +127,16 @@ class cprint():
 				sys.stdout.flush()
 				time.sleep(speed)
 
-# your should comment all the test conditions below if you want to use this as a module! 
 
+
+# your should comment all the test conditions below if you want to use this as a module! 
+'''
 ########### Simple example of only one style #################
 
 cprint(text)                              #Default style = 'd' 
 print("\n") #Do work here instead
-cprint(text, style="d")
-
+cprint(text, style="r")                   #Random printing style - this is the best option .
+print("\n")
 ##############################################################
 
 ########### Simple example of trying all styles ##############
@@ -142,7 +146,7 @@ for  i in ["d", "fo", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"]:
 	print("\n") #Do work here instead
 ##############################################################
 
-
+'''
 
 
 
