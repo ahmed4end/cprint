@@ -145,9 +145,9 @@ for  i in ["d", "fo", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"]:
 	cprint(text, style=i)
 	print("\n") #Do work here instead
 ##############################################################
+time.sleep(5)  # DO SOME WORK HERE INSTEAD XD
 
 '''
 
 
 
-time.sleep(5)  # DO SOME WORK HERE INSTEAD XD
