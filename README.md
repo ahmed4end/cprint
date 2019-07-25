@@ -4,7 +4,7 @@ Here we go!
 
 TUTORIAL: 
 1- replace the module in your working directory.
-2- import the modulle into your script and use it like this:
+2- import the module into your script and use it like this:
 	
 	from cprint import cprint
 	cprint("Message to print!")  
