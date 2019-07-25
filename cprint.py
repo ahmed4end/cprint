@@ -129,7 +129,7 @@ class cprint():
 
 
 
-# your should comment all the test conditions below if you want to use this as a module! 
+# you should comment all the test conditions below if you want to use this as a module! 
 '''
 ########### Simple example of only one style #################
 
