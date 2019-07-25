@@ -17,7 +17,7 @@ class cprint():
 			input()
 
 
-		categories = { 
+		categories = { ### PLEASE NOTICE: you should customize the next keys as u like so u can remember the styles clearly xD.###
 			"d": "self.dprint(text, speed)",     #Distortion printing
 			"fo": "self.foprint(text, speed)",   #Fade out print
 			"sd": "self.sdprint(text, speed)",   #Slow #Distortion printing
