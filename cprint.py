@@ -9,7 +9,7 @@ class cprint():
 			
 	#i know it's crazy using oop this way, but i don't really care, this is the way i opertate xD
 	"""
-	def __init__(self,text , style='d', speed=1/99,cmd_color="A"):
+	def __init__(self,text , style='r', speed=1/99,cmd_color="A"):
 		os.system("color "+cmd_color)
 		self.letters = [chr(i) for  i in range(65, 123)] + ["@", "#", "$", "%", "^", "&", "*", "~"] #Editable! 
 		if len(text) > 75: #Warning!
@@ -133,9 +133,7 @@ class cprint():
 '''
 ########### Simple example of only one style #################
 
-cprint(text)                              #Default style = 'd' 
-print("\n") #Do work here instead
-cprint(text, style="r")                   #Random printing style - this is the best option .
+cprint(text)    #Deafult style is random printing style - this is the best option .
 print("\n")
 ##############################################################
 
