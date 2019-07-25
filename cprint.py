@@ -1,4 +1,4 @@
-import random, sys, time, os,subprocess
+import random, sys, time, os
 text = "Hello, Human!, this message should be printed in a cool way xD: "
 
 class cprint():
@@ -125,6 +125,7 @@ class cprint():
 				sys.stdout.flush()
 				time.sleep(speed)
 
+# your should comment all the test conditions below if you want to use this as a module! 
 
 ########### Simple example of only one style #################
 
