@@ -1,4 +1,4 @@
-import random, sys, time, os,subprocess
+import random, sys, time, os
 
 text = "Hello, Human!, this message should be printed in a cool way xD: "
 
