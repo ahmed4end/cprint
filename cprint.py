@@ -148,23 +148,14 @@ class cprint():
 				time.sleep(speed)
 
 
-# you should comment all the test conditions below if you want to use this as a module! 
-'''
-########### Simple example of only one style #################
 
-cprint(text)    #Deafult style is random printing style - this is the best option .
-print("\n")
-##############################################################
-
-########### Simple example of trying all styles ##############
-
-for  i in ["d", "fo", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"]:
-	cprint(text, style=i)
+if __name__ == "__main__":
+	
+	########### Test ###########
+	
+	cprint(text)            #Random printing style  
 	print("\n") #Do work here instead
-##############################################################
-time.sleep(5)  # DO SOME WORK HERE INSTEAD XD
-
-'''
-
-
-
+	styles=["d", "fo", "fow", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"]
+	for  i in styles:
+		cprint(text, style=i)
+		print("\n") #Do work here instead
