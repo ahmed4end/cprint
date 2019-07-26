@@ -1,6 +1,5 @@
-import random, sys, time, os
+import random, sys, time, os,subprocess
 
-#text example (must be under 75 letters!)
 text = "Hello, Human!, this message should be printed in a cool way xD: "
 
 class cprint():
@@ -19,9 +18,10 @@ class cprint():
 			input()
 
 
-		categories = { ### PLEASE NOTICE: you should customize the next keys as u like so u can remember the styles clearly xD.###
+		categories = { 
 			"d": "self.dprint(text, speed)",     #Distortion printing
 			"fo": "self.foprint(text, speed)",   #Fade out print
+			"fow":"self.fowprint(text, speed)",  #Words #Fade out print
 			"sd": "self.sdprint(text, speed)",   #Slow #Distortion printing
 			"rsd": "self.rsdprint(text, speed)", #reverse #Slow #Distortion printing
 			"t": "self.tprint(text, speed)",     #Train printing
@@ -30,8 +30,9 @@ class cprint():
 			"rs": "self.rsprint(text, speed)",	 #Reverse #Slow printing
 			"m": "self.mprint(text, speed)",     #Middle printing
 			"rm": "self.rmprint(text, speed)",	 #reverse #Middle printing
-			"r": 'eval(categories[random.choice(["d", "fo", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"])])'
+			"r": 'eval(categories[random.choice(["d", "fo", "fow", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm"])])'
 		}
+		self.memory = [999,999999]
 		try:
 			eval(categories[style])
 		except:
@@ -56,6 +57,25 @@ class cprint():
 				text[random.randint(0, len(text)-1)] = " "
 			res.append("".join(text))
 		self.Core(res[::-1], "i", speed, False)
+	def fowprint(self, text, speed=(1/99)):
+		splited = text.split()
+		seq = [text]
+		
+		def rando(s,e):
+			while True:
+				n = random.randint(s, e)
+				if n != self.memory[-1] and n!= self.memory[-2]:
+					self.memory.append(n)
+					return n
+		for i in range(0,len(splited)+30):
+			copy = splited[:]
+			for _ in range(i+1):
+				rnd = rando(0, len(copy)-1)
+				copy[rnd] = " "*len(copy[rnd])
+			seq.append(" ".join(copy))
+		seq= [" "*len(splited)] + seq[::-1]
+		self.Core(seq, "i", speed, False) 
+
 
 	def sdprint(self, text, speed=1/99):
 		#Full name: Slow distortion printing
@@ -126,7 +146,6 @@ class cprint():
 				sys.stdout.write("\r" + eval(pattern))
 				sys.stdout.flush()
 				time.sleep(speed)
-
 
 
 # you should comment all the test conditions below if you want to use this as a module! 
