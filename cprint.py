@@ -8,7 +8,8 @@ class cprint():
 			
 	#i know it's crazy using oop this way, but i don't really care, this is the way i opertate xD
 	"""
-	def __init__(self,text , style='r', speed=1/99,cmd_color="A"):
+	def __init__(self,text , style='r', speed=1/99,cmd_color="A", newline=False):
+		if newline:print()
 		os.system("color "+cmd_color)
 		self.letters = [chr(i) for  i in range(65, 123)] + ["@", "#", "$", "%", "^", "&", "*", "~"] #Editable! 
 		if len(text) > 75: #Warning!
@@ -59,6 +60,9 @@ class cprint():
 		self.Core(res[::-1], "i", speed, False)
 	def fowprint(self, text, speed=(1/99)):
 		splited = text.split()
+		if len(splited) < 4:
+			self.foprint(text)
+			return None
 		seq = [text]
 		
 		def rando(s,e):
