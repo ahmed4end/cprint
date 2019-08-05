@@ -37,7 +37,7 @@ class cprint():
 			"rs": "self.rsprint(text, speed)",	 #Reverse #Slow printing
 			"m": "self.mprint(text, speed)",     #Middle printing
 			"rm": "self.rmprint(text, speed)",	 #reverse #Middle printing
-			"u": "self.uprint(text, speed)",
+			"u": "self.uprint(text, speed)",       #upper casing slow printing
 			"r": 'eval(categories[random.choice(["d", "fo", "fow", "sd", "rsd", "t", "rt", "s", "rs", "m", "rm", "u"])])'
 		}
 		self.memory = [999,999999]
